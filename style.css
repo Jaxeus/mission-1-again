@@ -1,0 +1,362 @@
+/* CSS to include:
+Flexbox  
+
+Background Stylisation of <Body> or <div>  
+
+Font Stylisation  
+
+Margins  
+
+Width & Height  
+
+Animations  
+*/
+
+/* font-family: 'Forum', cursive;
+font-family: 'Jost', sans-serif; */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Parlour Information Bar */
+
+#store-info-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  background-color: salmon;
+  color: #3b3b3b;
+}
+
+#store-info-bar p {
+  display: inline-block;
+  padding: 8px 10px;
+}
+
+/* .malaligned-div {
+  margin-bottom: 3.333px;
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+/* Main Section */
+
+main {
+  height: 100vh;
+  background-image: url("images/unwind-2-resized.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #3b3b3b;
+}
+
+header h2 {
+  font-size: 3rem;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+nav ul li a:link {
+  text-decoration: none;
+  color: #3b3b3b;
+}
+
+nav ul li a:visited {
+  color: #3b3b3b;
+}
+
+nav ul li a:hover {
+  color: #704080;
+}
+
+nav ul li a:active {
+  font-weight: bolder;
+  color: salmon;
+}
+
+/* Main Heading */
+
+main h1 {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 7.5rem;
+  font-family: "Forum", sans-serif;
+  color: #704080;
+  animation-name: fade, warp;
+  animation-duration: 3s;
+}
+
+/* Animations */
+
+@keyframes warp {
+  from {
+    font-size: 4rem;
+  }
+  to {
+    font-size: 7.5rem;
+  }
+}
+
+@keyframes fade {
+  from {
+    color: salmon;
+  }
+  to {
+    color: #704080;
+  }
+}
+
+/* About Section */
+
+#about-section {
+  background-color: white;
+  color: #704080;
+}
+
+#about-section h2 {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Forum", cursive;
+  color: salmon;
+}
+
+#about-section li {
+  margin: 20px 10px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#my-story1 {
+  color: #4c0167;
+}
+
+#my-story2 {
+  color: #755280;
+}
+
+/* Treatments and Pricing Section */
+
+#treatments-and-pricing h2 {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Forum", cursive;
+  color: salmon;
+}
+
+#treatments {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  margin: 0 10px;
+  gap: 10px;
+  background-color: #feb8b07f;
+}
+
+#treatments img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#treatments h3 {
+  font-weight: 800;
+  padding: 10px;
+  text-align: center;
+  color: #3b3b3b;
+}
+
+#treatments h4 {
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  color: #704080;
+}
+
+.caption {
+  align-self: center;
+}
+
+.treatment-1 {
+  order: 1;
+}
+.treatment-2 {
+  order: 2;
+}
+.treatment-3 {
+  order: 3;
+}
+.treatment-4 {
+  order: 4;
+}
+.treatment-5 {
+  order: 5;
+}
+.treatment-6 {
+  order: 6;
+}
+.treatment-7 {
+  order: 7;
+}
+.treatment-8 {
+  order: 8;
+}
+
+/* Contact & Booking Section */
+
+#contact-section {
+  background-color: #7040804a;
+}
+
+#contact-section h2 {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Forum", cursive;
+  color: salmon;
+}
+
+#below {
+  text-decoration: none;
+  color: #704080;
+}
+
+#contact-section #enquire {
+  color: #704080;
+}
+
+#contact-section p {
+  margin: 20px 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #3b3b3b;
+}
+
+form {
+  text-align: center;
+}
+
+form input {
+  margin-bottom: 20px;
+}
+
+textarea {
+  margin: 20px;
+}
+
+.send-message {
+  margin-bottom: 40px;
+}
+
+/* Footer */
+
+footer {
+  padding: 20px;
+  background-color: #7040804a;
+  border-top: 1px solid #4c0167;
+}
+
+/* Responsive Design */
+@media only screen and (min-width: 1032px) {
+  #store-info-bar br {
+    display: none;
+  }
+}
+
+/* Main Heading with Animations */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  main h1 {
+    font-size: 5.5rem;
+    animation-name: fade, warp;
+    animation-duration: 3s;
+  }
+
+  @keyframes warp {
+    from {
+      font-size: 3rem;
+    }
+    to {
+      font-size: 5.5rem;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      color: salmon;
+    }
+    to {
+      color: #704080;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  main h1 {
+    font-size: 3.5rem;
+    animation-name: fade, warp;
+    animation-duration: 3s;
+  }
+
+  @keyframes warp {
+    from {
+      font-size: 2rem;
+    }
+    to {
+      font-size: 3.5rem;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      color: salmon;
+    }
+    to {
+      color: #704080;
+    }
+  }
+}
+
+/* Treatments Section */
+@media only screen and (min-width: 620px) and (max-width: 850px) {
+  #treatments h3 {
+    font-size: 24px;
+  }
+
+  #treatments h4 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  #treatments h3 {
+    font-size: 30px;
+  }
+
+  #treatments h4 {
+    font-size: 24px;
+  }
+}
