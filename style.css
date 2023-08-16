@@ -64,44 +64,54 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #3b3b3b;
+  color: salmon;
+  position: sticky;
+  top: 0px;
+  background-color: #704080ec;
 }
 
 header h2 {
   font-size: 3rem;
-  padding: 10px;
-  padding-left: 10px;
+  padding: 0 10px;
+  /* padding-left: 10px; */
 }
+
+/* PROBLEM WITH STICKY - IT ONLY GOES TO THE END OF THE MAIN SECTION */
 
 nav ul li {
+  /* text-align: right; */
   list-style: none;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 0 20px;
 }
 
-nav ul li a:link {
-  text-decoration: none;
-  color: #3b3b3b;
-}
-
-nav ul li a:visited {
-  color: #3b3b3b;
-}
-
-nav ul li a:hover {
-  color: #704080;
-}
-
-nav ul li a:active {
-  font-weight: bolder;
+/* nav a {
   color: salmon;
+} */
+
+nav a:link {
+  text-decoration: none;
+  color: salmon;
+}
+
+nav a:visited {
+  color: salmon;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a:active {
+  font-weight: bolder;
+  color: #3b3b3b;
 }
 
 /* Main Heading */
 
 main h1 {
   text-align: center;
-  margin-top: 120px;
+  margin-top: 220px;
   font-size: 7.5rem;
   font-family: "Forum", sans-serif;
   color: #704080;
@@ -137,6 +147,7 @@ main h1 {
 }
 
 #about-section h2 {
+  margin-top: 70px;
   padding: 20px 0;
   text-align: center;
   font-size: 3rem;
@@ -161,6 +172,7 @@ main h1 {
 /* Treatments and Pricing Section */
 
 #treatments-and-pricing h2 {
+  margin-top: 70px;
   padding: 20px 0;
   text-align: center;
   font-size: 3rem;
@@ -233,6 +245,7 @@ main h1 {
 }
 
 #contact-section h2 {
+  margin-top: 70px;
   padding: 20px 0;
   text-align: center;
   font-size: 3rem;
@@ -270,6 +283,14 @@ textarea {
 
 .send-message {
   margin-bottom: 40px;
+  padding: 2px;
+}
+
+.send-message:active {
+  background-color: salmon;
+  color: #704080;
+  border: 1px solid #3b3b3b;
+  border-radius: 2px;
 }
 
 /* Footer */
@@ -281,14 +302,66 @@ footer {
 }
 
 /* Responsive Design */
-@media only screen and (min-width: 1032px) {
+@media only screen and (min-width: 795px) {
   #store-info-bar br {
     display: none;
   }
 }
 
+@media only screen and (max-width: 1032px) {
+  #store-info-bar {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  #store-info-bar {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 442px) {
+  #store-info-bar {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 408px) {
+  #store-info-bar {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 915px) {
+  header h2 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 397px) {
+  nav a {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 766px) {
+  header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 637px) {
+  header {
+    flex-direction: column;
+  }
+}
+
 /* Main Heading with Animations */
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   main h1 {
     font-size: 5.5rem;
     animation-name: fade, warp;
@@ -316,6 +389,32 @@ footer {
 
 @media only screen and (max-width: 800px) {
   main h1 {
+    font-size: 4.5rem;
+    animation-name: fade, warp;
+    animation-duration: 3s;
+  }
+
+  @keyframes warp {
+    from {
+      font-size: 3rem;
+    }
+    to {
+      font-size: 4.5rem;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      color: salmon;
+    }
+    to {
+      color: #704080;
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  main h1 {
     font-size: 3.5rem;
     animation-name: fade, warp;
     animation-duration: 3s;
@@ -340,6 +439,47 @@ footer {
   }
 }
 
+@media only screen and (max-width: 650px) {
+  main h1 {
+    font-size: 2.5rem;
+    animation-name: fade, warp;
+    animation-duration: 3s;
+  }
+
+  @keyframes warp {
+    from {
+      font-size: 1rem;
+    }
+    to {
+      font-size: 2.5rem;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      color: salmon;
+    }
+    to {
+      color: #704080;
+    }
+  }
+}
+
+/* Section Headings */
+
+@media only screen and (max-width: 500px) {
+  #contact-section > h2,
+  #treatments-and-pricing > h2,
+  #about-section > h2 {
+    margin-top: 50px;
+    font-size: 2.5rem;
+  }
+
+  #contact-section p {
+    font-size: 1rem;
+  }
+}
+
 /* Treatments Section */
 @media only screen and (min-width: 620px) and (max-width: 850px) {
   #treatments h3 {
@@ -358,5 +498,15 @@ footer {
 
   #treatments h4 {
     font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  #treatments h3 {
+    font-size: 12px;
+  }
+
+  #treatments h4 {
+    font-size: 10px;
   }
 }
