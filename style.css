@@ -238,6 +238,17 @@ main h1 {
   order: 8;
 }
 
+/* Review Section */
+
+#review-section h2 {
+  margin-top: 70px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Forum", cursive;
+  color: salmon;
+}
+
 /* Contact & Booking Section */
 
 #contact-section {
