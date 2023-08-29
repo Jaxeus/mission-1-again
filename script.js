@@ -45,21 +45,50 @@ rightButton.addEventListener("click", nextSlide);
 // Previous Slide
 leftButton.addEventListener("click", previousSlide);
 
-// trial code
+/* // For-loop code
 
-/* const reviewSlide1 = document.querySelector(".slide1");
+const reviewSlide1 = document.querySelector(".slide1");
 const reviewSlide2 = document.querySelector(".slide2");
 const reviewSlide3 = document.querySelector(".slide3");
+const rightButton = document.querySelector(".next-button");
+const leftButton = document.querySelector(".previous-button");
 
 const reviewSlides = [reviewSlide1, reviewSlide2, reviewSlide3];
 console.log(...reviewSlides);
-
-
-
-
 let thisSlide = 0;
-const lastSlide = reviewSlides.length - 1; */
+const lastSlide = reviewSlides.length;
 
-/* rightButton.addEventListener("click", nextSlide() {
+const goToSlide = function (slide) {
+  for (let thisSlide = 0; thisSlide < reviewSlides.length; thisSlide++) {
+    reviewSlides[thisSlide].style.transform = `translateX(${
+      100 * (slide - thisSlide)
+    }%)`;
+    // return thisSlide++;
+  }
+};
 
-}) */
+// goToSlide(0);
+
+const nextSlide = function () {
+  if (thisSlide === lastSlide - 1) {
+    thisSlide = 0;
+  } else {
+    thisSlide++;
+  }
+
+  goToSlide(thisSlide);
+};
+
+const previousSlide = function () {
+  if (thisSlide === 0) {
+    thisSlide = lastSlide - 1;
+  } else {
+    thisSlide--;
+  }
+
+  goToSlide(thisSlide);
+};
+
+rightButton.addEventListener("click", nextSlide());
+leftButton.addEventListener("click", previousSlide());
+ */
