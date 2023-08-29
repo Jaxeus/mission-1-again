@@ -68,6 +68,7 @@ header {
   position: sticky;
   top: 0px;
   background-color: #704080ec;
+  z-index: 2;
 }
 
 header h2 {
@@ -248,6 +249,149 @@ main h1 {
   font-family: "Forum", cursive;
   color: salmon;
 }
+
+.slider {
+  max-width: 100rem;
+  height: 75vh;
+  /* margin: 0 auto; */
+  position: relative;
+
+  /* IN THE END */
+  overflow: hidden;
+  /* background-color: hotpink; */
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+  background-color: white;
+  /* background-color: #feb8b07f; */
+}
+
+.review-box {
+  width: 70%;
+  height: 60vh;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  padding: 20px 20px;
+  padding-bottom: 0;
+  /* background-color: yellow; */
+}
+
+/* .review-box::before {
+  position: absolute;
+  top: -5.7rem;
+  left: -6.8rem;
+  line-height: 1;
+  font-size: 20rem;
+  color: var(--color-primary);
+  z-index: -1;
+} */
+
+.review-box1 {
+  background-color: #d0ffcf;
+}
+
+.review-box2 {
+  background-color: #d0ffcf;
+}
+
+.review-box3 {
+  background-color: #d0ffcf;
+}
+
+.review-heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #704080;
+  /* background-color: green; */
+}
+
+.review-testimony {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3b3b3b;
+  text-align: center;
+  /* background-color: blue; */
+}
+
+.review-author {
+  font-size: 1.2rem;
+  /* background-color: red; */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+
+  border: none;
+  /* background: rgba(255, 255, 255, 0.7); */
+  /* font-family: inherit; */
+  background-color: #7040804a;
+  color: #3b3b3b;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.next-button {
+  right: 8%;
+  transform: translate(50%, -50%);
+}
+
+.previous-button {
+  left: 8%;
+  transform: translate(-50%, -50%);
+}
+
+/* .dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  Only necessary when overlying images
+  box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7);
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  background-color: #fff;
+  background-color: #888;
+  opacity: 1;
+} */
 
 /* Contact & Booking Section */
 
