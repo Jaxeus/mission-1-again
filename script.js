@@ -1,6 +1,6 @@
 console.log("Online, yeaboiii!");
 
-//Slider
+/* //Slider
 const slides = document.querySelectorAll(".slide");
 const leftButton = document.querySelector(".previous-button");
 const rightButton = document.querySelector(".next-button");
@@ -43,9 +43,9 @@ rightButton.addEventListener("click", nextSlide);
 // -100%, 0%, 100%, 200%
 
 // Previous Slide
-leftButton.addEventListener("click", previousSlide);
+leftButton.addEventListener("click", previousSlide); */
 
-/* // For-loop code
+// For-loop code
 
 const reviewSlide1 = document.querySelector(".slide1");
 const reviewSlide2 = document.querySelector(".slide2");
@@ -58,16 +58,16 @@ console.log(...reviewSlides);
 let thisSlide = 0;
 const lastSlide = reviewSlides.length;
 
-const goToSlide = function (slide) {
+const goToSlide = function (slide, index) {
   for (let thisSlide = 0; thisSlide < reviewSlides.length; thisSlide++) {
     reviewSlides[thisSlide].style.transform = `translateX(${
-      100 * (slide - thisSlide)
+      100 * (thisSlide - slide)
     }%)`;
     // return thisSlide++;
   }
 };
 
-// goToSlide(0);
+goToSlide(0);
 
 const nextSlide = function () {
   if (thisSlide === lastSlide - 1) {
@@ -89,6 +89,5 @@ const previousSlide = function () {
   goToSlide(thisSlide);
 };
 
-rightButton.addEventListener("click", nextSlide());
-leftButton.addEventListener("click", previousSlide());
- */
+rightButton.addEventListener("click", nextSlide);
+leftButton.addEventListener("click", previousSlide);
